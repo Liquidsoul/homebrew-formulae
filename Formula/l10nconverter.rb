@@ -5,7 +5,7 @@ class L10nconverter < Formula
   head "https://github.com/Liquidsoul/LocalizationConverter.git", :branch => "develop"
 
   def install
-    system "make", "release"
+    system "unset CC; make release"
     bin.install ".build/release/LocalizationConverter" => "l10nconverter"
   end
 
